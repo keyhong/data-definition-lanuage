@@ -20,8 +20,10 @@ CREATE TABLE IF NOT EXISTS ADHC.KMA_GRID_STDR_INFO (
 	CONSTRAINT kma_grid_stdr_info_pk PRIMARY KEY (nation_nm, admd_cd, admd_dtl_nm1, admd_dtl_nm2, admd_dtl_nm3)
 );
 
+-- 테이블 COMMENT
 COMMENT ON TABLE ADHC.KMA_GRID_STDR_INFO IS '기상청그리드기준정보';
 
+-- 컬럼 COMMENT
 COMMENT ON COLUMN ADHC.KMA_GRID_STDR_INFO.nation_nm IS '국가명@pk';
 COMMENT ON COLUMN ADHC.KMA_GRID_STDR_INFO.admd_cd IS '행정동코드@pk';
 COMMENT ON COLUMN ADHC.KMA_GRID_STDR_INFO.admd_dtl_nm1 IS '행정동상세명1@pk';

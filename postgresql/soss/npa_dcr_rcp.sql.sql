@@ -1,0 +1,47 @@
+-- 경찰청신고접수 | NPA_DCR_RCP
+
+CREATE TABLE SOSS.NPA_DCR_RCP (
+	rcp_de VARCHAR(10),
+	rcp_tm VARCHAR(10),
+	incd_emr_cd VARCHAR(10),
+	rcp_ty_nm VARCHAR(20),
+	ass_cl_nm VARCHAR(20),
+	incd_ass_nm VARCHAR(20),
+	cmp_grfc_nm VARCHAR(20),
+	end_cl_nm VARCHAR(20),
+	stt_end_nm VARCHAR(20),
+	lno_adrs VARCHAR(10),
+	rn_adrs VARCHAR(10),
+	admd VARCHAR(20),
+	lo NUMERIC(18,8),
+	la NUMERIC(18,8),
+	gu_cd VARCHAR(20),
+	admd_cd VARCHAR(20),
+	utmk_lo NUMERIC(18,8),
+	utmk_la NUMERIC(18,8),
+	mtr_no VARCHAR(20)
+);
+
+-- 테이블 COMMENT
+COMMENT ON TABLE SOSS.NPA_DCR_RCP IS '경찰청신고접수';
+
+-- 컬럼 COMMENT
+COMMENT ON COLUMN SOSS.NPA_DCR_RCP.rcp_de IS '접수일자';
+COMMENT ON COLUMN SOSS.NPA_DCR_RCP.rcp_tm IS '접수시간';
+COMMENT ON COLUMN SOSS.NPA_DCR_RCP.incd_emr_cd IS '사건긴급코드';
+COMMENT ON COLUMN SOSS.NPA_DCR_RCP.rcp_ty_nm IS '접수유형명';
+COMMENT ON COLUMN SOSS.NPA_DCR_RCP.ass_cl_nm IS '종별분류명';
+COMMENT ON COLUMN SOSS.NPA_DCR_RCP.incd_ass_nm IS '사건종별명';
+COMMENT ON COLUMN SOSS.NPA_DCR_RCP.cmp_grfc_nm IS '관할관서명';
+COMMENT ON COLUMN SOSS.NPA_DCR_RCP.end_cl_nm IS '종결분류명';
+COMMENT ON COLUMN SOSS.NPA_DCR_RCP.stt_end_nm IS '신고종결명';
+COMMENT ON COLUMN SOSS.NPA_DCR_RCP.lno_adrs IS '지번주소';
+COMMENT ON COLUMN SOSS.NPA_DCR_RCP.rn_adrs IS '도로명주소';
+COMMENT ON COLUMN SOSS.NPA_DCR_RCP.admd IS '행정동';
+COMMENT ON COLUMN SOSS.NPA_DCR_RCP.lo IS '경도';
+COMMENT ON COLUMN SOSS.NPA_DCR_RCP.la IS '위도';
+COMMENT ON COLUMN SOSS.NPA_DCR_RCP.gu_cd IS '구코드';
+COMMENT ON COLUMN SOSS.NPA_DCR_RCP.admd_cd IS '행정동코드';
+COMMENT ON COLUMN SOSS.NPA_DCR_RCP.utmk_lo IS '경도(UTM-K)';
+COMMENT ON COLUMN SOSS.NPA_DCR_RCP.utmk_la IS '위도(UTM-K)';
+COMMENT ON COLUMN SOSS.NPA_DCR_RCP.mtr_no IS '행렬번호';
