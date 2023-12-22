@@ -1,23 +1,23 @@
 -- 기상청그리드기준정보 | Postgres | KMA_GRID_STDR_INFO
 
 CREATE TABLE IF NOT EXISTS ADHC.KMA_GRID_STDR_INFO (
-	nation_nm VARCHAR(50),
-	admd_cd VARCHAR(50),
-	admd_dtl_nm1 VARCHAR(50),
-	admd_dtl_nm2 VARCHAR(50),
-	admd_dtl_nm3 VARCHAR(50),
-	grid_x_crd DECIMAL(18, 8),
-	grid_y_crd DECIMAL(18, 8),
-	lo_dtl_val1 VARCHAR(50),
-	lo_dtl_val2 VARCHAR(50),
-	lo_dtl_val3 VARCHAR(50),
-	la_dtl_val1 VARCHAR(50),
-	la_dtl_val2 VARCHAR(50),
-	la_dtl_val3 VARCHAR(50),
-	lo DECIMAL(18, 8),
-	la DECIMAL(18, 8),
-	lc_updt_de VARCHAR(50),
-	CONSTRAINT kma_grid_stdr_info_pk PRIMARY KEY (nation_nm, admd_cd, admd_dtl_nm1, admd_dtl_nm2, admd_dtl_nm3)
+	nation_nm VARCHAR(50)
+, admd_cd VARCHAR(10)
+, admd_dtl_nm1 VARCHAR(50)
+, admd_dtl_nm2 VARCHAR(50)
+, admd_dtl_nm3 VARCHAR(50)
+, grid_x_crd DECIMAL(18, 8)
+, grid_y_crd DECIMAL(18, 8)
+, lo_dtl_val1 VARCHAR(50)
+, lo_dtl_val2 VARCHAR(50)
+, lo_dtl_val3 VARCHAR(50)
+, la_dtl_val1 VARCHAR(50)
+, la_dtl_val2 VARCHAR(50)
+, la_dtl_val3 VARCHAR(50)
+, lo DECIMAL(13, 10)
+, la DECIMAL(12, 10)
+, lc_updt_de VARCHAR(50)
+, CONSTRAINT kma_grid_stdr_info_pk PRIMARY KEY (nation_nm, admd_cd, admd_dtl_nm1, admd_dtl_nm2, admd_dtl_nm3)
 );
 
 -- 테이블 COMMENT

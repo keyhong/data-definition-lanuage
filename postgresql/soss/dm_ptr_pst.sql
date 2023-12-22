@@ -1,0 +1,36 @@
+-- (T)순찰거점
+CREATE TABLE IF NOT EXISTS SOSS.DM_PTR_PST (
+	stdr_de VARCHAR(8)
+, ptr_tmzn_cd VARCHAR(1)
+, plbx_nm VARCHAR(10)
+, pst_sn SMALLINT
+, gu_cd VARCHAR(5) NOT NULL
+, admd_cd VARCHAR(10) NOT NULL
+, la DECIMAL(12, 10) NOT NULL
+, lo DECIMAL(13, 10) NOT NULL
+, grid_id VARCHAR(10) NOT NULL
+, avrg_safe_idex DECIMAL(5, 2) NOT NULL
+, ptr_vhcl_co SMALLINT NOT NULL
+, bst_clsr_co SMALLINT NOT NULL
+, ptr_pst_cd VARCHAR(1) NOT NULL
+, CONSTRAINT dm_ptr_pst_pk PRIMARY KEY (stdr_de, ptr_tmzn_cd, plbx_nm, pst_sn)
+);
+
+-- 테이블 COMMENT
+COMMENT ON TABLE SOSS.DM_PTR_PST IS '순찰거점';
+
+-- 컬럼 COMMENT
+COMMENT ON COLUMN SOSS.DM_PTR_PST.stdr_de IS '기준일자@pk';
+COMMENT ON COLUMN SOSS.DM_PTR_PST.ptr_tmzn_cd IS '순찰시간대코드@pk';
+COMMENT ON COLUMN SOSS.DM_PTR_PST.plbx_nm IS '지구대명@pk';
+COMMENT ON COLUMN SOSS.DM_PTR_PST.pst_sn IS '거점순번@pk';
+COMMENT ON COLUMN SOSS.DM_PTR_PST.gu_cd IS '구코드';
+COMMENT ON COLUMN SOSS.DM_PTR_PST.admd_cd IS '행정동코드';
+COMMENT ON COLUMN SOSS.DM_PTR_PST.la IS  '위도';
+COMMENT ON COLUMN SOSS.DM_PTR_PST.lo IS '경도';
+COMMENT ON COLUMN SOSS.DM_PTR_PST.grid_id IS '그리드ID';
+COMMENT ON COLUMN SOSS.DM_PTR_PST.avrg_safe_idex IS '평균안전지수';
+COMMENT ON COLUMN SOSS.DM_PTR_PST.ptr_vhcl_co IS '순찰차량수';
+COMMENT ON COLUMN SOSS.DM_PTR_PST.bst_clsr_co IS '최적군집수';
+COMMENT ON COLUMN SOSS.DM_PTR_PST.ptr_pst_cd IS '순찰거점코드';
+

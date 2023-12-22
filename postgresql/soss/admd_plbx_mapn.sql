@@ -1,14 +1,14 @@
 -- 행정동지구대매핑 | ADMD_PLBX_MAPN
 
 CREATE TABLE IF NOT EXISTS SOSS.ADMD_PLBX_MAPN (
-	admd_cd VARCHAR(10) primary key, 
-	gu_cd VARCHAR(5) NULL,
-	gu_nm VARCHAR(10) NULL,
-	admd_nm VARCHAR(10) NULL,
-	plst_nm VARCHAR(10) NULL,
-	plbx_nm VARCHAR(10) NULL,
-	plbx_adrs VARCHAR(50) NULL,
-	ptr_vhcl_co INT NULL
+	admd_cd VARCHAR(10) PRIMARY KEY
+, gu_cd VARCHAR(5)
+, gu_nm VARCHAR(10)
+, admd_nm VARCHAR(10)
+, plst_nm VARCHAR(10)
+, plbx_nm VARCHAR(10)
+, plbx_adrs VARCHAR(50)
+, ptr_vhcl_co SMALLINT 
 );
 
 -- 테이블 COMMENT

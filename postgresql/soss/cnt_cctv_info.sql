@@ -1,37 +1,37 @@
 -- 관제CCTV정보 | CNT_CCTV_INFO
 
 CREATE TABLE IF NOT EXISTS SOSS.CNT_CCTV_INFO (
-	cctv_mngm_no VARCHAR(20) PRIMARY KEY,
-	mngm_ist_nm  VARCHAR(20),
-	sgg_nm  VARCHAR(20),
-	ins_year VARCHAR(10), 
-	ins_mm VARCHAR(10),
-	ins_de VARCHAR(10),
-	ins_prp_cn VARCHAR(30),
-	la numeric(18,8),
-	lo numeric(18,8),
-	rn_adrs VARCHAR(20),
-	lno_adrs VARCHAR(20),
-	admd_nm VARCHAR(20),
-	ins_plc_nm VARCHAR(20),
-	pxl_val VARCHAR(20),
-	cmr_ty_nm VARCHAR(20),
-	mngm_dept_nm VARCHAR(20),
-	telco_nm VARCHAR(20),
-	wire_no VARCHAR(20),
-	cmp_plst_nm VARCHAR(20),
-	cmr_mdl_nm VARCHAR(20),
-	makr_nm VARCHAR(20),
-	bsnm_nm VARCHAR(20),
-	ins_mthd_nm VARCHAR(20),
-	frst_ins_acc_de VARCHAR(20),
-	elpl_no VARCHAR(20),
-	cmp_kepco_nm VARCHAR(20),
-	pht_mthd_ty_nm VARCHAR(20),
-	mnt_dstn_val VARCHAR(20),
-	ip_val VARCHAR(20),
-	pss_val VARCHAR(20),
-	user_id VARCHAR(20)
+	cctv_mngm_no VARCHAR(20) PRIMARY KEY
+, mngm_ist_nm  VARCHAR(20)
+, sgg_nm  VARCHAR(20)
+, ins_year VARCHAR(10)
+, ins_mm VARCHAR(10)
+, ins_de VARCHAR(10)
+, ins_prp_cn VARCHAR(30)
+, la DECIMAL(12, 10)
+, lo DECIMAL(13, 10)
+, rn_adrs VARCHAR(20)
+, lno_adrs VARCHAR(20)
+, admd_nm VARCHAR(20)
+, ins_plc_nm VARCHAR(20)
+, pxl_val VARCHAR(20)
+, cmr_ty_nm VARCHAR(20)
+, mngm_dept_nm VARCHAR(20)
+, telco_nm VARCHAR(20)
+, wire_no VARCHAR(20)
+, cmp_plst_nm VARCHAR(20)
+, cmr_mdl_nm VARCHAR(20)
+, makr_nm VARCHAR(20)
+, bsnm_nm VARCHAR(20)
+, ins_mthd_nm VARCHAR(20)
+, frst_ins_acc_de VARCHAR(20)
+, elpl_no VARCHAR(20)
+, cmp_kepco_nm VARCHAR(20)
+, pht_mthd_ty_nm VARCHAR(20)
+, mnt_dstn_val VARCHAR(20)
+, ip_val VARCHAR(20)
+, pss_val VARCHAR(20)
+, user_id VARCHAR(20)
 );
 
 -- 테이블 COMMENT

@@ -1,19 +1,18 @@
--- 인천PCELL기준정보 | IC_PCEL_STDR_INFO
-
+-- (T)인천PCELL기준정보
 CREATE TABLE IF NOT EXISTS SOSS.IC_PCEL_STDR_INFO (
-	grid_id VARCHAR(10) PRIMARY KEY,
-	mtr_no VARCHAR(10),
-	admd_cd VARCHAR(10),
-	la DECIMAL(12, 10),
-	lo DECIMAL(13, 10),
-	utmk_cnt_la DECIMAL(32, 6),
-	utmk_cnt_lo DECIMAL(32, 6),
-	utmk_min_la DECIMAL(32, 6),
-	utmk_min_lo DECIMAL(32, 6),
-	utmk_max_la DECIMAL(32, 6),
-	utmk_max_lo DECIMAL(32, 6),
-	cctv_co SMALLINT
-);
+	grid_id VARCHAR(10) PRIMARY KEY
+, mtr_no VARCHAR(10)
+, admd_cd VARCHAR(10)
+, la DECIMAL(12, 10)
+, lo DECIMAL(13, 10)
+, utmk_cnt_la DECIMAL(18, 8)
+, utmk_cnt_lo DECIMAL(18, 8)
+, utmk_min_la DECIMAL(18, 8)
+, utmk_min_lo DECIMAL(18, 8)
+, utmk_max_la DECIMAL(18, 8)
+, utmk_max_lo DECIMAL(18, 8)
+, cctv_co SMALLINT
+)
 
 -- 테이블 COMMENT
 COMMENT ON TABLE SOSS.IC_PCEL_STDR_INFO IS '인천PCELL기준정보';

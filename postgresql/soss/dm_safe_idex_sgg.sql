@@ -1,0 +1,17 @@
+-- (T)안전지수시군구
+CREATE TABLE IF NOT EXISTS SOSS.DM_SAFE_IDEX_SGG (
+	stdr_de VARCHAR(8)
+, stdr_tm VARCHAR(2)
+, gu_cd VARCHAR(5)
+, safe_idex DECIMAL(5, 2) NOT NULL
+, CONSTRAINT dm_safe_idex_sgg_pk PRIMARY KEY (stdr_de, stdr_tm, gu_cd)
+);
+
+-- 테이블 COMMENT
+COMMENT ON TABLE SOSS.DM_SAFE_IDEX_SGG IS '안전지수시군구';
+
+-- 컬럼 COMMENT
+COMMENT ON COLUMN SOSS.DM_SAFE_IDEX_SGG.stdr_de IS '기준일자@pk';
+COMMENT ON COLUMN SOSS.DM_SAFE_IDEX_SGG.stdr_tm IS '기준시간@pk';
+COMMENT ON COLUMN SOSS.DM_SAFE_IDEX_SGG.gu_cd IS '구코드@pk';
+COMMENT ON COLUMN SOSS.DM_SAFE_IDEX_SGG.safe_idex IS '안전지수';

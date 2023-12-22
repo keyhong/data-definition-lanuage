@@ -1,12 +1,11 @@
--- 인천날씨예보 | IC_WTH_FRCS
-
+-- (T)인천날씨예보
 CREATE TABLE IF NOT EXISTS SOSS.IC_WTH_FRCS (
-	stdr_de VARCHAR(8) NOT NULL,
-	tmzn VARCHAR(2) NOT NULL,
-	admd_cd VARCHAR(10) NOT NULL,
-	admd VARCHAR(10),
-	hd_val VARCHAR(10),
-	tmp_val VARCHAR(10)
+	stdr_de VARCHAR(8) NOT NULL
+, tmzn VARCHAR(4) NOT NULL
+, admd_cd VARCHAR(10) NOT NULL
+, admd VARCHAR(10)
+, hd_val VARCHAR(10)
+, tmp_val VARCHAR(10)
 );
 
 -- 테이블 COMMENT

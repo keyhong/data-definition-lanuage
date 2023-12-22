@@ -1,55 +1,54 @@
 -- 인천서비스PCELL성연령인구(PCELL) | Postrgres | INCHEON_SERVICE_PCELL_SEX_AGE_POP
 
 CREATE TABLE IF NOT EXISTS ADHC.INCHEON_SERVICE_PCELL_SEX_AGE_POP (
-	std_ymd VARCHAR(8),
-	hcode VARCHAR(10),
-	x_coord DECIMAL(18, 8),
-	y_coord DECIMAL(18, 8),
-	h_m_10 DECIMAL(18, 2),
-	h_m_20 DECIMAL(18, 2),
-	h_m_30 DECIMAL(18, 2),
-	h_m_40 DECIMAL(18, 2),
-	h_m_50 DECIMAL(18, 2),
-	h_m_60 DECIMAL(18, 2),
-	h_m_70 DECIMAL(18, 2),
-	h_w_10 DECIMAL(18, 2),
-	h_w_20 DECIMAL(18, 2),
-	h_w_30 DECIMAL(18, 2),
-	h_w_40 DECIMAL(18, 2),
-	h_w_50 DECIMAL(18, 2),
-	h_w_60 DECIMAL(18, 2),
-	h_w_70 DECIMAL(18, 2),
-	w_m_10 DECIMAL(18, 2),
-	w_m_20 DECIMAL(18, 2),
-	w_m_30 DECIMAL(18, 2),
-	w_m_40 DECIMAL(18, 2),
-	w_m_50 DECIMAL(18, 2),
-	w_m_60 DECIMAL(18, 2),
-	w_m_70 DECIMAL(18, 2),
-	w_w_10 DECIMAL(18, 2),
-	w_w_20 DECIMAL(18, 2),
-	w_w_30 DECIMAL(18, 2),
-	w_w_40 DECIMAL(18, 2),
-	w_w_50 DECIMAL(18, 2),
-	w_w_60 DECIMAL(18, 2),
-	w_w_70 DECIMAL(18, 2),
-	v_m_10 DECIMAL(18, 2),
-	v_m_20 DECIMAL(18, 2),
-	v_m_30 DECIMAL(18, 2),
-	v_m_40 DECIMAL(18, 2),
-	v_m_50 DECIMAL(18, 2),
-	v_m_60 DECIMAL(18, 2),
-	v_m_70 DECIMAL(18, 2),
-	v_w_10 DECIMAL(18, 2),
-	v_w_20 DECIMAL(18, 2),
-	v_w_30 DECIMAL(18, 2),
-	v_w_40 DECIMAL(18, 2),
-	v_w_50 DECIMAL(18, 2),
-	v_w_60 DECIMAL(18, 2),
-	v_w_70 DECIMAL(18, 2),
-	block_cd VARCHAR(20)
+	std_ymd VARCHAR(8)
+, hcode VARCHAR(10)
+, x_coord DECIMAL(18, 8)
+, y_coord DECIMAL(18, 8)
+, h_m_10 DECIMAL(18, 2)
+, h_m_20 DECIMAL(18, 2)
+, h_m_30 DECIMAL(18, 2)
+, h_m_40 DECIMAL(18, 2)
+, h_m_50 DECIMAL(18, 2)
+, h_m_60 DECIMAL(18, 2)
+, h_m_70 DECIMAL(18, 2)
+, h_w_10 DECIMAL(18, 2)
+, h_w_20 DECIMAL(18, 2)
+, h_w_30 DECIMAL(18, 2)
+, h_w_40 DECIMAL(18, 2)
+, h_w_50 DECIMAL(18, 2)
+, h_w_60 DECIMAL(18, 2)
+, h_w_70 DECIMAL(18, 2)
+, w_m_10 DECIMAL(18, 2)
+, w_m_20 DECIMAL(18, 2)
+, w_m_30 DECIMAL(18, 2)
+, w_m_40 DECIMAL(18, 2)
+, w_m_50 DECIMAL(18, 2)
+, w_m_60 DECIMAL(18, 2)
+, w_m_70 DECIMAL(18, 2)
+, w_w_10 DECIMAL(18, 2)
+, w_w_20 DECIMAL(18, 2)
+, w_w_30 DECIMAL(18, 2)
+, w_w_40 DECIMAL(18, 2)
+, w_w_50 DECIMAL(18, 2)
+, w_w_60 DECIMAL(18, 2)
+, w_w_70 DECIMAL(18, 2)
+, v_m_10 DECIMAL(18, 2)
+, v_m_20 DECIMAL(18, 2)
+, v_m_30 DECIMAL(18, 2)
+, v_m_40 DECIMAL(18, 2)
+, v_m_50 DECIMAL(18, 2)
+, v_m_60 DECIMAL(18, 2)
+, v_m_70 DECIMAL(18, 2)
+, v_w_10 DECIMAL(18, 2)
+, v_w_20 DECIMAL(18, 2)
+, v_w_30 DECIMAL(18, 2)
+, v_w_40 DECIMAL(18, 2)
+, v_w_50 DECIMAL(18, 2)
+, v_w_60 DECIMAL(18, 2)
+, v_w_70 DECIMAL(18, 2)
+, block_cd VARCHAR(20)
 ) PARTITION BY RANGE (std_ymd);
-
 
 -- 테이블 COMMENT
 COMMENT ON TABLE ADHC.INCHEON_SERVICE_PCELL_SEX_AGE_POP IS '인천서비스PCELL성연령인구(PCELL)';

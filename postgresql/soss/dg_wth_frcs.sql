@@ -1,15 +1,14 @@
--- 대구날씨예보 | DG_WTH_FRCS
-
+-- (T)대구날씨예보
 CREATE TABLE IF NOT EXISTS SOSS.DG_WTH_FRCS (
-	stdr_de VARCHAR(8) NULL,
-	tmzn VARCHAR(2) NULL,
-	admd_cd VARCHAR(10) NULL,
-	admd VARCHAR(10) NULL,
-	prc_prb VARCHAR(5) NULL,
-	hd_val VARCHAR(5) NULL,
-	pbmr_val VARCHAR(5) NULL,
-	prc_qy VARCHAR(5) NULL,
-	tmp_val VARCHAR(5) NULL
+	stdr_de VARCHAR(8)
+, tmzn VARCHAR(2)
+, admd_cd VARCHAR(10)
+, admd VARCHAR(10)
+, prc_prb VARCHAR(5)
+, hd_val VARCHAR(5)
+, pbmr_val VARCHAR(5)
+, prc_qy VARCHAR(5)
+, tmp_val VARCHAR(5)
 );
 
 -- 테이블 COMMENT
