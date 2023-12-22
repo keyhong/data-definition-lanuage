@@ -1,0 +1,40 @@
+--(T)부설주차장
+CREATE EXTERNAL TABLE IF NOT EXISTS DIL.DW_TRFC_ATTPKLT (
+  attpklt_sn                   BIGINT               COMMENT   '부설주차장순번@pk' 
+, legaldong_code               STRING               COMMENT   '법정동코드' 
+, adres                        STRING               COMMENT   '주소' 
+, adres_buld_nm                STRING               COMMENT   '주소건물명' 
+, prkplce_nm                   STRING               COMMENT   '주차장명' 
+, prmisn_de                    STRING               COMMENT   '허가일자' 
+, use_confm_de                 STRING               COMMENT   '사용승인일자' 
+, plot_ar                      DECIMAL(32, 6)       COMMENT   '대지면적' 
+, totar                        DECIMAL(32, 6)       COMMENT   '연면적' 
+, main_prpos                   STRING               COMMENT   '주용도' 
+, etc_prpos                    STRING               COMMENT   '기타용도' 
+, tot_parkng_co                BIGINT               COMMENT   '총주차수' 
+, insdhous_mchne_parkng_co     BIGINT               COMMENT   '옥내기계식주차수' 
+, insdhous_mchne_ar            DECIMAL(32, 6)       COMMENT   '옥내기계식면적' 
+, outhous_mchne_parkng_co      BIGINT               COMMENT   '옥외기계식주차수' 
+, outhous_mchne_ar             DECIMAL(32, 6)       COMMENT   '옥외기계식면적' 
+, insdhous_sfsrv_parkng_co     BIGINT               COMMENT   '옥내자주식주차수' 
+, insdhous_sfsrv_ar            DECIMAL(32, 6)       COMMENT   '옥내자주식면적' 
+, outhous_sfsrv_parkng_co      BIGINT               COMMENT   '옥외자주식주차수' 
+, outhous_sfsrv_ar             DECIMAL(32, 6)       COMMENT   '옥외자주식면적' 
+, oper_time_opn_yn             STRING               COMMENT   '운영시간내개방가부(일반인)' 
+, oper_ovtime_opn_yn           STRING               COMMENT   '운영시간외개방가부(일반인)' 
+, parkng_chrge_ty              STRING               COMMENT   '주차요금유형' 
+, chrge_pymnt_ty               STRING               COMMENT   '요금지불유형' 
+, nodrvstm_opertn              STRING               COMMENT   '차량부제시행' 
+, trnsc_id                     STRING               COMMENT   '트랜잭션아이디' 
+, trnsc_sttus_code             STRING               COMMENT   '트랜잭션상태코드' 
+, trnsc_process_dttm           STRING               COMMENT   '트랜잭션처리날짜일자' 
+, dhub_data_qlity_code         STRING               COMMENT   '2-3세부데이터품질코드'
+, lod_dt                       STRING               COMMENT   '적재일시' 
+)
+COMMENT '부설주차장'
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY '\u0002'
+STORED AS ORC
+LOCATION '/lake/dw/DIL/DW_TRFC_ATTPKLT'
+TBLPROPERTIES ('ORC.COMPRESS'='SNAPPY')
+;

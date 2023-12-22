@@ -1,0 +1,42 @@
+--(T)표준노드링크
+CREATE EXTERNAL TABLE IF NOT EXISTS DIL.DW_TRFC_STD_NODE_LINK (
+  std_link_id                  STRING               COMMENT   '표준링크ID@pk' 
+, start_std_node               STRING               COMMENT   '출발표준노드@pk' 
+, arvl_std_node                STRING               COMMENT   '도착표준노드@pk' 
+, gis_mdstnc                   DECIMAL(32, 6)       COMMENT   'GIS미터거리' 
+, real_mdstnc                  DECIMAL(32, 6)       COMMENT   '실제미터거리' 
+, std_link_nm                  STRING               COMMENT   '표준링크명' 
+, real_nm_yn                   STRING               COMMENT   '실제명칭가부' 
+, car_dvr_yn                   STRING               COMMENT   '자동차전용가부' 
+, oway_tfclne_co               BIGINT               COMMENT   '편도차선수' 
+, lwet_kmve                    BIGINT               COMMENT   '최저킬로미터속도' 
+, top_kmve                     BIGINT               COMMENT   '최고킬로미터속도' 
+, road_angle                   BIGINT               COMMENT   '도로각도' 
+, road_prfomnc                 BIGINT               COMMENT   '도로성능' 
+, mad                          BIGINT               COMMENT   '중위수절대편차' 
+, road_grad_code               STRING               COMMENT   '도로등급코드' 
+, road_ty_code                 STRING               COMMENT   '도로유형코드' 
+, road_no                      STRING               COMMENT   '도로번호' 
+, road_nm                      STRING               COMMENT   '도로명' 
+, jyg_sctn_yn                  STRING               COMMENT   '중용구간가부' 
+, cnnc_road_ty_code            STRING               COMMENT   '연결도로유형코드' 
+, pasng_lmtt_vhcle_ty_coDE     STRING               COMMENT   '통행제한차량유형코드' 
+, pasng_lmtt_ld                DECIMAL(7, 2)        COMMENT   '통행제한하중' 
+, pasng_lmtt_hg                DECIMAL(7, 2)        COMMENT   '통행제한높이' 
+, opps_drc_std_link_id         STRING               COMMENT   '반대방향표준링크ID' 
+, std_link_sttus_code          STRING               COMMENT   '표준링크상태코드' 
+, applc_begin_de               STRING               COMMENT   '적용시작일자' 
+, applc_end_de                 STRING               COMMENT   '적용종료일자' 
+, trnsc_id                     STRING               COMMENT   '트랜잭션아이디' 
+, trnsc_sttus_code             STRING               COMMENT   '트랜잭션상태코드' 
+, trnsc_process_dttm           STRING               COMMENT   '트랜잭션처리날짜일자' 
+, dhub_data_qlity_code         STRING               COMMENT   '2-3세부데이터품질코드'
+, lod_dt                       STRING               COMMENT   '적재일시' 
+)
+COMMENT '표준노드링크'
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY '\u0002'
+STORED AS ORC
+LOCATION '/lake/dw/DIL/DW_TRFC_STD_NODE_LINK'
+TBLPROPERTIES ('ORC.COMPRESS'='SNAPPY')
+;
